@@ -1,0 +1,57 @@
+div.bgImageContainer {
+  background-color: #083aa8; }
+
+div#navBar {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding-right: 10px;
+  color: white; }
+
+div.userRegistration {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: right;
+  color: #fff; }
+
+div.userRegistration a {
+  text-decoration: none;
+  color: #fff; }
+
+div#fullHeightContainer {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr; }
+
+div#leftAlign {
+  width: 100%;
+  background-color: #09407F; }
+
+div#leftAlign h1 {
+  position: absolute;
+  top: 20%;
+  left: 35.8%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 54px; }
+  div#leftAlign h1:before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 70px;
+    background: url(.././images/aerova-white.png);
+    background-repeat: no-repeat;
+    background-position: -2% 28%;
+    left: -48px;
+    background-size: 404% 68%; }
+
+div#leftAlign span {
+  color: #09407F; }
+
+/*# sourceMappingURL=landing.css.map */

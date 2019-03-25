@@ -1,0 +1,244 @@
+div#registerFlight {
+  margin: 0; }
+  div#registerFlight section.routes {
+    display: flex;
+    background-color: #fff;
+    color: black;
+    border-radius: 2px;
+    position: absolute;
+    left: 58%;
+    transform: translate(-50%, 0);
+    margin-top: 30px;
+    margin-bottom: 70px;
+    top: 10%;
+    width: 40%; }
+    div#registerFlight section.routes div.routeView {
+      width: 100%; }
+      div#registerFlight section.routes div.routeView div#wrapper {
+        position: relative;
+        margin: auto;
+        padding: 32px; }
+        div#registerFlight section.routes div.routeView div#wrapper .route-dropdown {
+          position: relative;
+          margin: 20px 0px 8px 0px;
+          width: 45%; }
+          div#registerFlight section.routes div.routeView div#wrapper .route-dropdown.route_click:before {
+            content: 'Flight Route';
+            display: flex;
+            font-size: 12px;
+            padding: 0px 0px 3px 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .route-dropdown .selected {
+            display: flex;
+            color: #131313;
+            padding: 10px 15px;
+            border: 2px solid #DEE5FF;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px #DEE5FF;
+            padding-left: 5px;
+            cursor: pointer; }
+            div#registerFlight section.routes div.routeView div#wrapper .route-dropdown .selected span {
+              cursor: pointer;
+              align-items: flex-end;
+              margin: 0;
+              transition: 0.15s all ease; }
+          div#registerFlight section.routes div.routeView div#wrapper .route-dropdown .drop-content {
+            position: relative;
+            transition: 1s all ease; }
+            div#registerFlight section.routes div.routeView div#wrapper .route-dropdown .drop-content ul {
+              position: absolute;
+              left: 0px;
+              top: -3px;
+              display: none;
+              list-style: none;
+              width: 100%;
+              background: #fff;
+              border-top: 0;
+              border-radius: 0 0 5px 5px;
+              padding-top: 3px;
+              z-index: 2;
+              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+              transition: 1s all ease; }
+              div#registerFlight section.routes div.routeView div#wrapper .route-dropdown .drop-content ul li.flight-airport {
+                cursor: pointer;
+                padding-left: 5px; }
+                div#registerFlight section.routes div.routeView div#wrapper .route-dropdown .drop-content ul li.flight-airport:hover {
+                  transition: 1s all ease;
+                  background: #CCC;
+                  border-left: 5px solid rgba(0, 0, 0, 0.8); }
+                div#registerFlight section.routes div.routeView div#wrapper .route-dropdown .drop-content ul li.flight-airport .flight-route span {
+                  display: flex;
+                  text-decoration: none;
+                  color: #131313; }
+        div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown {
+          position: relative;
+          margin: 20px 0px 8px 0px;
+          width: 45%; }
+          div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown.aircraft_click:before {
+            content: 'Aircraft';
+            display: flex;
+            font-size: 12px;
+            padding: 0px 0px 3px 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown .selected span {
+            display: flex;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            color: #131313;
+            padding-left: 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown .selected span {
+            cursor: pointer;
+            display: flex;
+            padding: 10px 15px;
+            margin: 0;
+            padding-left: 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown .drop-content {
+            position: relative; }
+          div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown .drop-content ul {
+            position: absolute;
+            left: 0px;
+            top: -3px;
+            display: none;
+            list-style: none;
+            width: 100%;
+            background: #fff;
+            border-top: 0;
+            border-radius: 0 0 5px 5px;
+            padding-top: 3px;
+            z-index: 2;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+          div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown .drop-content ul li span {
+            display: flex;
+            text-decoration: none;
+            color: #131313;
+            padding: 10px 0px 10px 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .aircraft_dropdown .drop-content ul li span:hover {
+            transition: 1s all ease;
+            background: #CCC;
+            border-left: 5px solid rgba(0, 0, 0, 0.8); }
+        div#registerFlight section.routes div.routeView div#wrapper .flight-airport div {
+          display: flex;
+          padding-bottom: 10px; }
+        div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown {
+          position: relative;
+          margin: 20px 0px 8px 0px;
+          width: 45%; }
+          div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown.carrier_click:before {
+            content: 'Carrier';
+            display: flex;
+            font-size: 12px;
+            padding: 0px 0px 3px 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown .selected span {
+            display: flex;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            color: #131313; }
+          div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown .selected span {
+            cursor: pointer;
+            display: flex;
+            padding: 10px 15px;
+            margin: 0;
+            padding-left: 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown .drop-content {
+            position: relative; }
+          div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown .drop-content ul {
+            position: absolute;
+            left: 0px;
+            top: -3px;
+            display: none;
+            list-style: none;
+            width: 100%;
+            background: #fff;
+            border-top: 0;
+            border-radius: 0 0 5px 5px;
+            padding-top: 3px;
+            z-index: 2;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+          div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown .drop-content ul li span {
+            display: flex;
+            text-decoration: none;
+            color: #131313;
+            padding: 10px 0px 10px 5px; }
+          div#registerFlight section.routes div.routeView div#wrapper .carrier_dropdown .drop-content ul li span:hover {
+            transition: 1s all ease;
+            background: #CCC;
+            border-left: 5px solid rgba(0, 0, 0, 0.8); }
+        div#registerFlight section.routes div.routeView div#wrapper #wrapper div#formInputs {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: grid;
+          grid-row-gap: 22px;
+          margin-top: 30px; }
+        div#registerFlight section.routes div.routeView div#wrapper #stop {
+          width: 100%;
+          height: 100%;
+          position: absolute; }
+        div#registerFlight section.routes div.routeView div#wrapper .input-effect {
+          position: relative;
+          margin: 25px 0px 25px 0px; }
+        div#registerFlight section.routes div.routeView div#wrapper input[type="text"] {
+          font: 15px/24px "Lato", Arial, sans-serif;
+          color: #333;
+          width: 100%;
+          box-sizing: border-box;
+          letter-spacing: 1px; }
+        div#registerFlight section.routes div.routeView div#wrapper .focus-transition {
+          border: 0;
+          padding: 7px 15px;
+          border: 1px solid #ccc;
+          position: relative;
+          background: transparent; }
+        div#registerFlight section.routes div.routeView div#wrapper .focus-transition ~ .focus-bg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 100%;
+          background-color: transparent;
+          transition: 0.4s;
+          z-index: -1; }
+        div#registerFlight section.routes div.routeView div#wrapper .focus-transition:focus ~ .focus-bg,
+        div#registerFlight section.routes div.routeView div#wrapper .has-content.effect-22 ~ .focus-bg {
+          transition: 0.4s;
+          width: 100%;
+          background-color: #ededed; }
+        div#registerFlight section.routes div.routeView div#wrapper .focus-transition ~ label {
+          position: absolute;
+          left: 14px;
+          width: 100%;
+          top: 10px;
+          color: #aaa;
+          transition: 0.3s;
+          z-index: -1;
+          letter-spacing: 0.5px; }
+        div#registerFlight section.routes div.routeView div#wrapper .focus-transition:focus ~ label, div#registerFlight section.routes div.routeView div#wrapper .has-content.focus-transition ~ label {
+          top: -18px;
+          left: 0;
+          font-size: 12px;
+          color: #333;
+          transition: 0.3s; }
+    @media screen and (min-width: 900px) {
+      div#registerFlight section.routes .routes {
+        width: 35%;
+        clear: none; } }
+
+span.country--abbreviation {
+  margin-left: 10px; }
+
+span.country--name {
+  margin: 0px 10px 0px 10px; }
+
+button.add-flight {
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s; }
+  button.add-flight:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19); }
+
+/*# sourceMappingURL=flights.css.map */

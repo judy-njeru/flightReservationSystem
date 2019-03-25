@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+  overflow-y: scroll;
+  &#home{
+    .container {
+        margin-top:120px;
+        padding-bottom: 100px;
+
+        .row {
+          margin-bottom: 0px;
+        }
+        
+        .card {
+          padding: 0px 10px 0px 10px;
+          overflow: hidden;
+          background: #303F9F;
+
+          .origin-dropdown, .destination-dropdown {
+            position:relative;
+            margin: 20px 0px 8px 0px;
+            width: 100%;
+            .selected {
+              display:flex; 
+              color:#131313;
+              padding:10px 15px;
+              padding-left: 5px;
+              border-bottom: 1px solid white;
+              cursor: pointer;
+          
+              span {
+                  cursor:pointer; 
+                  align-items: flex-end;
+                  margin:0;
+                  color: #fff;
+              }
+            }
+              
+            .drop-content{
+              position:relative; 
+          
+              ul {
+                  position: absolute;
+                  left: 0px;
+                  top: -3px;
+                  display: none;
+                  list-style: none;
+                  width: 100%;
+                  background: #fff;
+                  border-top: 0;
+                  border-radius: 0 0 5px 5px;
+                  padding-top: 3px;
+                  z-index: 2;
+                  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+              }  
+  
+              .origin-airport, .destination-airport {
+                cursor: pointer;
+                padding: 0.5em 0;
+                transition: background 0.5s ease;
+                width: 100%;
+
+                &:hover {
+                  background: #CCC;
+                }
+
+                span {
+                  box-sizing: border-box;
+                  display: inline-block;
+                }
+
+                .country--abbreviation {
+                  padding: 0 1em;
+                  width: 18%;
+                }
+                
+                .country--name {
+                  width: 78%;
+                }
+              }
+            }
+          }
+
+
+          label {
+            position: relative;
+            display: block;
+          }
+
+          label > input {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #9e9e9e;
+            border-radius: 0;
+            outline: none;
+            height: 45px;
+            width: 100%;
+            font-size: 16px;
+            margin: 0 0 30px 0;
+            padding: 0;
+            box-shadow: none;
+            box-sizing: content-box;
+            transition: all .3s;
+          }
+
+          label > input:valid + span {
+            transform: translateY(-15px) scale(0.8);
+            transform-origin: 0;
+          }
+
+          label > input:valid {
+            border-bottom: 1px solid #3F51B5;
+            box-shadow: 0 1px 0 0 #3F51B5;
+          }
+
+          label > span {
+            color: #fff !important;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            font-size: 16px;
+            cursor: text;
+            transition: .2s ease-out;
+          }
+
+          label > input:focus + span {
+            transform: translateY(-25px) scale(0.8);
+            transform-origin: 0;
+            color: #3F51B5;
+          }
+
+          label > input:focus {
+            border-bottom: 1px solid #3F51B5;
+            box-shadow: 0 1px 0 0 #3F51B5;
+          }
+          /*..... Select Guests .....*/
+          .select-hidden {
+            display: none;
+            visibility: hidden;
+            padding-right: 10px;
+          }
+          
+          .select {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #fff;
+            width: 220px;
+            height: 40px;
+          }
+          
+          .select-styled {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            color:#fff;
+            border-bottom: 1px solid #fff;
+            padding: 8px 15px;
+            -moz-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            -webkit-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+          }
+          .select-styled:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-color: #fff transparent transparent transparent;
+            position: absolute;
+            top: 16px;
+            right: 10px;
+          }
+         
+          .select-styled:active, .select-styled.active {
+            color:#fff;
+          }
+          .select-styled:active:after, .select-styled.active:after {
+            top: 9px;
+            border-color: transparent transparent #fff transparent;
+          }
+          ::-webkit-scrollbar { 
+            display: none; 
+        }
+          .select-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            z-index: 999;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 132px;
+            overflow-y: scroll;
+            background: #fff;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            color:#000000;
+            
+          }
+          .select-options li {
+            margin: 0;
+            padding: 12px 0;
+            text-indent: 15px;
+            border-color: transparent transparent #fff transparent;
+            -moz-transition: all 0.15s ease-in;
+            -o-transition: all 0.15s ease-in;
+            -webkit-transition: all 0.15s ease-in;
+            transition: all 0.15s ease-in;
+          }
+          .select-options li:hover {
+            // color: #c0392b;
+            background: #f1f1f1;
+          }
+          .select-options li[rel="hide"] {
+            display: none;
+          }
+          
+          /* ----------------------------------------------------------------------
+          Search Flight Button
+          ------------------------------------------------------------------------- */
+          .btnSearchFlight {
+            margin-top:30px;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            padding: 12px 25px 12px 25px;;
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: .8px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+            white-space: nowrap;
+            outline: none;
+            border: none;
+            -webkit-user-select: none;
+              -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+            border-radius: 2px;
+            transition: all .3s ease-out;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.225);
+
+            &.btn-lightBlue {
+                color: #FFF;
+                background-color: #FFC107;
+                &:hover {
+                    background-color: rgb(255, 209, 72);
+                    text-decoration: none;
+                    box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.225);
+                  }
+                  
+              }
+          }
+
+        }
+    }
+  }
+  /*...Bootstrap Calendar ...*/
+  .datepicker {
+    border-radius: 0;
+    padding: 0;
+  }
+  .datepicker-days table thead, .datepicker-days table tbody, .datepicker-days table tfoot {
+    padding: 10px;
+    display: list-item;
+  }
+  .datepicker-days table thead, .datepicker-months table thead, .datepicker-years table thead, .datepicker-decades table thead, .datepicker-centuries table thead {
+    background: #3546b3;
+    color: #ffffff;
+    border-radius: 0;
+  }
+  .datepicker-days table thead tr:nth-child(2n+0) td, .datepicker-days table thead tr:nth-child(2n+0) th {
+    border-radius: 3px;
+  }
+  .datepicker-days table thead tr:nth-child(3n+0) {
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+    padding: 11px 13px;
+  }
+  .datepicker-months table thead td, .datepicker-months table thead th, .datepicker-years table thead td, .datepicker-years table thead th, .datepicker-decades table thead td, .datepicker-decades table thead th, .datepicker-centuries table thead td, .datepicker-centuries table thead th {
+    border-radius: 0;
+  }
+  .datepicker td, .datepicker th {
+    border-radius: 50%;
+    padding: 0 12px;
+  }
+  .datepicker-days table thead, .datepicker-months table thead, .datepicker-years table thead, .datepicker-decades table thead, .datepicker-centuries table thead {
+    background: #3F51B5;
+    color: #ffffff;
+    border-radius: 0;
+  }
+  .datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
+    background-image: none;
+  }
+  .datepicker .prev, .datepicker .next {
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+    width: 37px;
+    height: 37px;
+  }
+  .datepicker .prev:hover, .datepicker .next:hover {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.99);
+    font-size: 21px;
+  }
+  .datepicker .datepicker-switch {
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+  }
+  .datepicker .datepicker-switch:hover {
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+  }
+  .datepicker table tr td span {
+    border-radius: 2px;
+    margin: 3%;
+    width: 27%;
+  }
+  .datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
+    background-color: #3546b3;
+    background-image: none;
+  }
+  .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    top: 312.75px;
+  }
+  .datepicker-dropdown.datepicker-orient-top:before {
+    border-top: 7px solid rgba(0,0,0,.1);
+  }
+
+  .dateselect{
+    color:#fff;
+    top:30px;
+    border-bottom: 1px solid #fff !important;
+  }
+
+  .flightOffers {
+    .row {
+      margin-left: 30px;
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+    }
+
+    .flight_information ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
+      border-bottom: 1px solid #f1f1f1;
+      padding-bottom: 30px;
+      font-family: 'Titillium Web', sans-serif;
+      font-weight: 600;
+      color:#405189;
+
+    li {
+      .btnBookFlight {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 12px 25px 12px 25px;;
+        color: #424242;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: .8px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        vertical-align: middle;
+        white-space: nowrap;
+        outline: none;
+        border: none;
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        border-radius: 2px;
+        transition: all .3s ease-out;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.225);
+    
+        &.btn-lightBlue {
+            color: #fff;
+            background-color: #FFC107;
+            &:hover {
+                background-color: rgb(255, 209, 72);
+                text-decoration: none;
+                box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.225);
+              }  
+          }
+        }
+    }
+  }
+}
+  /* Book Now Sections */
+  section#reservations {
+    margin-top: 40px;
+    .row {
+        align-items: center;
+    }
+
+    .reservationList {
+      margin-left: 30px;
+    }
+
+    .card-city {
+      display: flex;
+      align-items: center;
+
+      .card {
+        background-color: #fff !important;
+        padding:0px;
+        width: 90px;
+        overflow: visible;
+        height:70px;
+        margin:0;
+
+        img {
+            width: 100%;
+            height:104%;
+        } 
+      }
+      h3 {
+        font-family: 'Titillium Web', sans-serif;
+        font-size:16px;
+        font-weight: 600;
+        color:#405189;
+        padding-left:20px;
+      } 
+    }
+    h2 {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size:30px;
+      font-weight: 600;
+      color:#343f65;
+    }   
+  }
+
+  div.flight_policy {
+    font-family: 'Titillium Web', sans-serif;
+    div:nth-child(1){
+      font-size: 12px;
+      font-weight: 300;
+    }
+    div:nth-child(2){
+      p {
+        text-align: right;
+        font-weight: 600;
+        color: #405189;
+      }
+      }
+  }
+
+  div.goto-booking {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+      div.arrow{
+        position: relative;
+        width: 0;
+        height: 0;
+        border-top: 3px solid transparent;
+        border-left: 10px solid red;
+        border-bottom: 3px solid transparent;
+        margin-left: 56px;
+            
+        &:before {
+          content: "";
+          position: absolute;
+          width: 35px;
+          height: 3px;
+          background: red;
+          right: 9px;
+          top: -1px;
+        }
+      }
+
+      h4 {
+        font-family: 'Titillium Web', sans-serif;
+        font-size:20px;
+        font-weight: 600;
+        color:#405189;
+        padding-left:20px;
+      }
+  }
+
+  .input-details{
+    margin-top: 30px;
+    margin-left: 2px !important;
+
+    div:nth-child(1){
+        padding-right:40px;
+    }
+  }
+
+
+  .material {
+    position: relative;
+    padding: 0;
+    margin: 5px;
+    border: none;
+    overflow: visible;
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px 10px 8px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #DDD;
+      font-size: 120%;
+      outline: none;
+      cursor: text;
+
+      &::-webkit-input-placeholder {
+        transition: color 300ms ease;
+      }
+      &:not(:focus)::-webkit-input-placeholder {
+        color: transparent;
+      }
+    }
+
+    hr {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 2px;
+      border: none;
+      background: #607D8B;
+      font-size: 1px;
+      will-change: transform, visibility;
+      transition: all 200ms ease-out;
+      transform: scaleX(0);
+      visibility: hidden;
+      z-index: 10;
+    }
+
+    label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 120%;
+      color: #607D8B;
+      transform-origin: 0 -150%;
+      transition: transform 300ms ease;
+      pointer-events: none;
+    }
+    
+    input:focus ~ label,
+    input:valid ~ label {
+      transform: scale(0.6);
+    }
+  }
+
+}
+
+
+  
+@media (min-width: 1400px){
+  .container {
+      max-width: 1440px;
+  }
+}
+
+@media (min-width: 1400px){
+  .container {
+      max-width: 1300px;
+  }
+}
+
+  
+

@@ -1,0 +1,237 @@
+div#navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1; }
+
+div#flightNotFound {
+  color: red;
+  display: none;
+  top: 28%;
+  z-index: 20;
+  position: absolute;
+  left: 5%; }
+
+div#pageBackground {
+  background-color: #083aa8;
+  position: absolute;
+  top: 0; }
+
+div#backgroundImage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/aircraft.png");
+  background-size: cover;
+  background-position: 100% 65%;
+  background-repeat: no repeat; }
+
+div#flightSearch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 80px;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.autocomplete-drop-down {
+  position: relative;
+  width: 30vw; }
+
+.countries-input,
+.airports-list {
+  border: none;
+  box-sizing: border-box;
+  width: 30vw; }
+
+.origin-input-container, .destination-input-container {
+  height: 70px;
+  position: relative; }
+
+.origin-input-container label, .destination-input-container label {
+  color: #fff; }
+
+.origin-input, .destination-input {
+  width: 42vw;
+  height: 50px;
+  padding: 1em 0.5em;
+  position: relative;
+  transition: outline 0.2s ease;
+  transition-delay: 0.2s;
+  outline: none; }
+
+.countries-input:focus .input-underline {
+  transform: scaleY(0); }
+
+.countries-input:focus {
+  outline: none; }
+
+.countries-input:focus .input-arrow {
+  transform: rotate(180deg); }
+
+.input-underline {
+  background: #000;
+  bottom: 0;
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform-origin: center bottom;
+  transition: transform 0.3s ease;
+  width: 30vw; }
+
+.input-arrow {
+  position: absolute;
+  right: -10.5em;
+  top: calc(50% - 0.5rem);
+  transition: transform 0.3s ease; }
+
+.origin-airport-container, .destination-airport-container {
+  box-shadow: 0 8px 15px 0 rgba(33, 33, 33, 0.2);
+  /* opacity: 0; */
+  position: relative;
+  /* transform: scaleY(0); */
+  visibility: hidden;
+  transform-origin: center top;
+  transition: all 0.3s ease;
+  width: 30vw;
+  z-index: 20; }
+
+.origin-airport-container.visible, .destination-airport-container.visible {
+  opacity: 1;
+  transform: scaleY(1);
+  visibility: visible; }
+
+ul.airports-list {
+  background-color: #fff; }
+
+.airports-list {
+  align-content: middle;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 11.5em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 42vw; }
+
+.origin-airport, .destination-airport {
+  cursor: pointer;
+  padding: 0.5em 0;
+  transition: background 0.5s ease;
+  width: 100%; }
+
+.origin-airport:hover, .destination-airport:hover {
+  background: #CCC; }
+
+.origin-airport:span, .destination-airport:span {
+  box-sizing: border-box;
+  display: inline-block; }
+
+.country--abbreviation {
+  padding: 0 1em;
+  width: 18%; }
+
+.country--name {
+  width: 78%; }
+
+#dateBox label {
+  display: grid;
+  color: #fff; }
+
+div#ui-datepicker-div {
+  bottom: -95.85px !important;
+  width: 42%; }
+
+input#datepicker {
+  width: 42vw !important;
+  outline: none; }
+
+.pseudo-select-btn {
+  position: relative;
+  width: 12vw;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  text-align: left;
+  border: 1px solid #ccc;
+  outline: none; }
+
+.dropdown-icon {
+  font-size: 1.6rem;
+  padding: 0 4rem;
+  height: 1rem;
+  line-height: 0.5;
+  position: absolute; }
+
+.dropdowncontent {
+  position: relative;
+  width: 12vw;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 5px;
+  display: none; }
+
+.dropdowncontent h3 {
+  font-size: 14px; }
+
+.close-dropdowncontent-btn {
+  font-size: 2.6rem;
+  padding: 0.6rem;
+  position: absolute;
+  top: -1.1rem;
+  right: 1px;
+  width: 10%;
+  border: none;
+  outline: none;
+  background-color: transparent; }
+
+.traveller-unit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0.875rem; }
+
+.traveller-unit-label-container {
+  display: flex;
+  align-items: center; }
+
+.overflow-text {
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipse;
+  padding-top: 8px; }
+
+.traveller-unit-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+span.traveller-unit-count {
+  padding: 2px 9px 0px 9px; }
+
+button.traveller-unit-count-btn {
+  outline: none;
+  cursor: pointer;
+  height: 22px; }
+
+div.select_passengers {
+  padding-top: 20px; }
+
+button#decrementTravellerNumber {
+  margin-left: 4px; }
+
+button#btnFindFlights {
+  width: 40%;
+  font-size: 14px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  background-color: #083aa8; }
+
+button#btnFindFlights:hover {
+  color: #083aa8;
+  border: 2px solid #083aa8;
+  background-color: #fff; }
+
+/*# sourceMappingURL=home.css.map */

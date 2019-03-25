@@ -1,0 +1,66 @@
+div#loginNav {
+    position: fixed;
+    display: flex;
+    right: 2%;
+    top: 2%;
+    cursor: pointer;
+  }
+  
+  div#signUp:hover, div#adminLogin:hover {
+    color: #083aa8;
+  }
+  
+  div#loginNav div:first-child{
+    margin-right:15px;
+  }
+  
+  div#loginNav a:active, div#loginNav a{
+    text-decoration: none;
+    color: #5e5e5e;
+  }
+  
+  div.signupContainer{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-top: 170px;
+    width: 100%;
+  }
+  
+  div#boxSignUp {
+    width: 50%;
+    margin-top: -50px;
+  }
+  
+    
+  div#boxSignUp input{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+  }
+  
+  div#boxSignUp button {
+    width: 20%;
+    height: 35px;
+    float: right;
+    background-color: #083aa8;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border:none;
+    cursor: pointer;
+  }
+  
+  div#boxSignup button:hover {
+    background-color: #fff;
+    color: #083aa8;
+    border:2px solid #083aa8;
+  }
+  
+    

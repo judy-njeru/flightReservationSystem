@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #5e5e5e; }
+  body .nav-wrapper {
+    background-color: #303F9F; }
+    body .nav-wrapper a.brand-logo img {
+      width: 100px;
+      height: 38px;
+      padding-left: 15px; }
+    body .nav-wrapper h1 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 200;
+      margin: 0 !important; }
+    body .nav-wrapper ul {
+      display: flex;
+      align-items: center; }
+      body .nav-wrapper ul li {
+        position: relative; }
+        body .nav-wrapper ul li img {
+          height: 35px;
+          width: auto; }
+        body .nav-wrapper ul li i {
+          color: #fff; }
+          body .nav-wrapper ul li i.right {
+            margin-left: 0px !important; }
+        body .nav-wrapper ul li .dropdown-content {
+          position: absolute;
+          right: 0;
+          left: unset !important;
+          top: 64px !important;
+          width: auto !important;
+          outline: none; }
+
+.container {
+  width: 100vw;
+  height: 100vh; }
+
+input {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  font-size: 16px; }
+
+button {
+  width: 100%;
+  height: 50px; }
+
+.marginTop10 {
+  margin-top: 10px; }
+
+.marginTop20 {
+  margin-top: 20px; }
+
+div#navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
+  height: 70px;
+  background-color: #083aa8;
+  color: white; }
+
+div#navbar a {
+  text-decoration: none;
+  color: white; }
+
+/*# sourceMappingURL=main.css.map */

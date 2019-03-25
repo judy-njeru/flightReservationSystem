@@ -1,0 +1,173 @@
+/* search flights*/
+div#flightContainer {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  grid-column-gap: 30px;
+  width: 90%;
+  margin-left: 30px; }
+
+div.flightsHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #083aa8;
+  padding: 10px 0px 10px 0px;
+  color: #fff; }
+
+div.flightsHeader div {
+  border-right: 1px solid #fff; }
+
+div.flightInfo {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-row-gap: 3px;
+  border-right: 1px solid  #083aa8;
+  text-align: left;
+  padding: 10px 5px 10px 8px; }
+
+div.flightEconomyPrice {
+  border-right: 1px solid  #083aa8;
+  padding-top: 10px; }
+
+div.flightBusinessPrice {
+  padding-top: 10px; }
+
+div.airport {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+
+div.flight {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border: 1px solid grey;
+  font-size: 16px;
+  padding: 5px 0px 5px 0px;
+  text-align: center; }
+
+div.flight:nth-child(even) {
+  background-color: #fff;
+  border: 1px solid  #083aa8; }
+
+div#economyPriceDiv, div#businessPriceDiv {
+  color: #083aa8;
+  font-weight: bold; }
+
+div.time {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-weight: bold; }
+
+/* div.time div:nth-child(2) {
+    margin-left: 52px;
+} */
+svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  fill: #083aa8; }
+
+div.flightEconomyPrice, div.flightBusinessPrice {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 30px;
+  justify-content: center;
+  justify-items: center; }
+
+div#economyAvailability, div#businessAvailability {
+  color: red; }
+
+.label-container {
+  display: block;
+  position: relative; }
+
+/* Hide the browser's default radio button */
+.label-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer; }
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid  #083aa8;
+  border-radius: 50%; }
+
+/* On mouse-over, add a grey background color */
+.label-container:hover input ~ .checkmark {
+  background-color: #083aa8; }
+
+/* When the radio button is checked, add a blue background */
+.label-container input:checked ~ .checkmark {
+  background-color: #083aa8; }
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the indicator (dot/circle) when checked */
+.label-container input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the indicator (dot/circle) */
+.label-container .checkmark:after {
+  top: 6px;
+  left: 7.5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white; }
+
+div.flightsReservation {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1.9fr 1.3fr 1fr;
+  padding: 15px; }
+
+div#reserveHeader, div#passengers, div#flightInformation, div#totalPrice {
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+
+div#reserveHeader {
+  font-weight: bold; }
+
+div#totalPrice {
+  display: grid;
+  grid-template: columns;
+  grid-template-columns: 0.3fr 1fr; }
+
+div#priceDiv {
+  display: grid;
+  grid-template: columns;
+  grid-template-columns: 0fr 1fr; }
+
+span#flightTotalPrice {
+  font-weight: bold;
+  font-size: 30px;
+  color: #083aa8;
+  line-height: 0.6; }
+
+span#priceCurrency {
+  display: none;
+  line-height: 1.6; }
+
+button#btnReserveFlight {
+  background-color: #083aa8;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer; }
+
+/*# sourceMappingURL=flights.css.map */

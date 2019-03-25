@@ -1,0 +1,24 @@
+div#flightsView .flights {
+  display: flex;
+  background-color: #fff;
+  color: black;
+  border-radius: 2px;
+  position: absolute;
+  left: 58%;
+  transform: translate(-50%, 0);
+  margin-top: 30px;
+  top: 20%; }
+  div#flightsView .flights div.flightView {
+    width: 100%; }
+  @media screen and (min-width: 900px) {
+    div#flightsView .flights {
+      width: 65%;
+      clear: none; } }
+
+.btnUpdateFlight {
+  background-image: url("../../images/update.svg");
+  background-position: 22%;
+  background-size: 25%;
+  background-repeat: no-repeat; }
+
+/*# sourceMappingURL=flights_view.css.map */
